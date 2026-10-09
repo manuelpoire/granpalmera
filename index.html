@@ -428,8 +428,6 @@ footer b{color:#fff;letter-spacing:.2em}
 .mpo-zbtns button{width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.16);color:#fff;font-size:20px;cursor:pointer}
 
 /* === Inventario en vivo === */
-.ldot.st-Apartado{background:#E8923A !important}
-.ldot.st-Vendido{background:#9AA0A0 !important;opacity:.62}
 .badge-st{display:inline-block;font-size:.66rem;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:999px;margin-left:6px;vertical-align:2px}
 .b-Apartado{background:#FDE5C8;color:#9A5B13}
 .b-Vendido{background:#E8E8E8;color:#777}
@@ -437,6 +435,21 @@ footer b{color:#fff;letter-spacing:.2em}
 .lot.vendido button{pointer-events:none;opacity:.45}
 .cot-disclaimer{font-size:.78rem;color:var(--tinta-2);opacity:.8;margin-top:10px;line-height:1.45}
 #fMens,#fMensMapa{padding:8px 12px;border-radius:20px;border:1.5px solid var(--verde);background:#fff;color:var(--verde);font-size:.76rem;font-weight:600}
+
+/* === Estatus v2: diferencias fuertes === */
+.ldot{overflow:visible}
+.ldot.st-Apartado{background:#F08C1B !important;border-color:#fff !important}
+.ldot.st-Apartado::before{content:"";position:absolute;left:50%;top:50%;width:46%;height:46%;border-radius:50%;background:#fff;transform:translate(-50%,-50%)}
+.ldot.st-Vendido{background:#C23B3B !important;border-color:#fff !important;opacity:.95}
+.ldot.st-Vendido::before,.ldot.st-Vendido::after{content:"";position:absolute;left:50%;top:50%;width:72%;height:2.5px;background:#fff;border-radius:2px}
+.ldot.st-Vendido::before{transform:translate(-50%,-50%) rotate(45deg)}
+.ldot.st-Vendido::after{transform:translate(-50%,-50%) rotate(-45deg)}
+.inv-stats{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 2px}
+.inv-stats span{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;font-size:.82rem;font-weight:700;letter-spacing:.02em}
+.inv-stats i{width:12px;height:12px;border-radius:50%;display:inline-block;position:relative}
+.is-lib{background:#E7F2EB;color:#1E4B3C}.is-lib i{background:#2C6A52}
+.is-apa{background:#FDEBD3;color:#8A5410}.is-apa i{background:#F08C1B}.is-apa i::before{content:"";position:absolute;inset:3px;border-radius:50%;background:#fff}
+.is-ven{background:#F7E3E3;color:#8E2B2B}.is-ven i{background:#C23B3B}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://granpalmera.agento.mx/#website", "url": "https://granpalmera.agento.mx/", "name": "Gran Palmera by Agento", "inLanguage": "es-MX"}, {"@type": "RealEstateAgent", "@id": "https://granpalmera.agento.mx/#agente", "name": "Agento Bienes Raíces", "url": "https://granpalmera.agento.mx/", "email": "granpalmera@agento.mx", "telephone": "+52 444 575 5812", "areaServed": "Yucatán, México", "address": {"@type": "PostalAddress", "addressLocality": "Mérida", "addressRegion": "Yucatán", "addressCountry": "MX"}}, {"@type": "Residence", "@id": "https://granpalmera.agento.mx/#desarrollo", "name": "Gran Palmera", "description": "Comunidad planeada de 729 lotes residenciales en Telchac, Yucatán, con Playa Crystal Lagoon, campo de golf de 9 hoyos y Beach Club frente al mar, desarrollada por The Palms Group.", "address": {"@type": "PostalAddress", "addressLocality": "Telchac", "addressRegion": "Yucatán", "addressCountry": "MX"}}, {"@type": "Product", "@id": "https://granpalmera.agento.mx/#lotes", "name": "Lotes residenciales en Gran Palmera, Telchac, Yucatán", "description": "158 lotes en venta en Etapas 1 y 2, de 196 a 551 m², con esquema 20/60/20 y 60 mensualidades sin intereses.", "brand": {"@type": "Brand", "name": "The Palms Group"}, "offers": {"@type": "AggregateOffer", "priceCurrency": "MXN", "lowPrice": 823500, "highPrice": 3453000, "offerCount": 158, "availability": "https://schema.org/InStock", "url": "https://granpalmera.agento.mx/#cotizador"}}, {"@type": "FAQPage", "@id": "https://granpalmera.agento.mx/#faq", "mainEntity": [{"@type": "Question", "name": "¿Qué es Gran Palmera?", "acceptedAnswer": {"@type": "Answer", "text": "Una comunidad residencial de vida de costa en Telchac, Yucatán, desarrollada por The Palms Group: solo 729 lotes con Playa Crystal Lagoon, campo de golf de 9 hoyos y Beach Club frente al mar."}}, {"@type": "Question", "name": "¿Cuál es la forma de pago?", "acceptedAnswer": {"@type": "Answer", "text": "20% de enganche, 60% en 60 mensualidades iguales sin intereses y 20% al momento de escriturar (contra entrega). El financiamiento es interno y directo con The Palms Group, sin banco."}}, {"@type": "Question", "name": "¿Cómo calculo mi mensualidad?", "acceptedAnswer": {"@type": "Answer", "text": "Es el 1% del precio del lote. Un lote de $1,200,000 tiene enganche de $240,000, 60 mensualidades de $12,000 y pago final de $240,000. Usa el cotizador de esta página para verlo al detalle."}}, {"@type": "Question", "name": "¿De cuánto es el apartado?", "acceptedAnswer": {"@type": "Answer", "text": "$15,000, con vigencia de 15 días naturales. Se abona al enganche al firmar el contrato, o es devolutivo si no se realiza la operación."}}, {"@type": "Question", "name": "¿Cuándo se entrega y cuándo puedo construir?", "acceptedAnswer": {"@type": "Answer", "text": "Las Etapas 1 y 2 se entregan en 60 meses desde el inicio de comercialización. Los lotes se entregan con mojoneras, murete de acometida y registro pluvial; puedes construir cuando tu etapa esté urbanizada y entregada, cumpliendo el reglamento arquitectónico."}}, {"@type": "Question", "name": "¿Gran Palmera está en la playa?", "acceptedAnswer": {"@type": "Answer", "text": "Está en Telchac, a unos 9 km de la costa — y ahí mismo tendrás acceso al Beach Club The Palms frente al mar, además de la Playa Crystal Lagoon dentro de la comunidad."}}, {"@type": "Question", "name": "¿Cuánto cuestan mantenimiento y membresía?", "acceptedAnswer": {"@type": "Answer", "text": "El mantenimiento se estima en $4 MXN por m² (áreas comunes, seguridad 24/7 y paisajismo). La membresía mensual estimada de $4,500–$5,500 MXN da acceso al Beach Club, campo de golf y demás amenidades."}}, {"@type": "Question", "name": "¿El campo de golf es profesional?", "acceptedAnswer": {"@type": "Answer", "text": "Es un campo de 9 hoyos en formato Ejecutivo diseñado por Mark Meijer: ideal para perfeccionar el juego corto y excelente para principiantes."}}, {"@type": "Question", "name": "¿Habrá seguridad? ¿Tendrá privadas?", "acceptedAnswer": {"@type": "Answer", "text": "Seguridad 24/7 con cámaras, circuito cerrado y bardas perimetrales. No tiene privadas: es una sola gran comunidad planeada."}}, {"@type": "Question", "name": "¿Puedo comprar siendo extranjero?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. En México existen mecanismos legales para la compra por extranjeros según la ubicación y el régimen aplicable."}}, {"@type": "Question", "name": "¿Quién respalda el proyecto?", "acceptedAnswer": {"@type": "Answer", "text": "The Palms Group (Roberto Reyes Rivas), con trayectoria en la costa yucateca: Villa Mar, Coral Blu, Provincia y Gran Provincia Club de Golf. Aliados: Crystal Lagoons, Mark Meijer Design, Seijo Arquitectos y Bienal."}}, {"@type": "Question", "name": "¿Por qué comprar ahora?", "acceptedAnswer": {"@type": "Answer", "text": "Porque hoy existe la mayor variedad de ubicaciones, metrajes y condiciones de fase — y solo habrá 729 lotes."}}]}]}</script>
 </head>
@@ -581,6 +594,7 @@ footer b{color:#fff;letter-spacing:.2em}
       <button id="btnVMapa" class="on" onclick="setVista('mapa')">🗺️ Elegir en el master plan</button>
       <button id="btnVLista" onclick="setVista('lista')">☰ Ver lista de lotes</button>
     </div>
+<div class="inv-stats reveal" id="invStats"><span class="is-lib"><i></i><b id="nLib">158</b>&nbsp;Disponibles</span><span class="is-apa"><i></i><b id="nApa">0</b>&nbsp;Apartados</span><span class="is-ven"><i></i><b id="nVen">0</b>&nbsp;Vendidos</span></div>
     <div id="mapExplorer" class="reveal">
       <div class="map-filtros" style="padding:12px 14px 0">
         <button class="on" data-t="">Todos</button>
@@ -600,7 +614,7 @@ footer b{color:#fff;letter-spacing:.2em}
         <span><i class="d-Normal" style="background:var(--verde-2)"></i>Normal</span>
         <span><i style="background:var(--dorado)"></i>Frente a Campo</span>
         <span><i style="background:#C96A4A"></i>Frente a Parque</span>
-        <span><i style="background:#E8923A"></i>Apartado</span> <span><i style="background:#9AA0A0"></i>Vendido</span> <span style="opacity:.75">Los lotes sin marcador no están a la venta</span>
+        <span><i style="background:#F08C1B;position:relative"><b style="position:absolute;inset:3px;border-radius:50%;background:#fff"></b></i>Apartado</span> <span><i style="background:#C23B3B;position:relative;color:#fff;font-style:normal;font-weight:900;font-size:8px;display:inline-flex;align-items:center;justify-content:center">✕</i>Vendido</span> <span style="opacity:.75">Los lotes sin marcador no están a la venta</span>
       </div>
       <div id="lotCard">
         <button class="cerrar" onclick="cerrarLotCard()">×</button>
@@ -1703,6 +1717,9 @@ function aplicaInventario(){
   if(typeof renderDots==='function')renderDots();
   shown=12; renderLots();
   var libres=LOTS.filter(l=>estadoDe(l[0])==='Libre').length;
+  var apas=LOTS.filter(l=>estadoDe(l[0])==='Apartado').length, vens=LOTS.filter(l=>estadoDe(l[0])==='Vendido').length;
+  var eL=document.getElementById('nLib'),eA=document.getElementById('nApa'),eV=document.getElementById('nVen');
+  if(eL){eL.textContent=libres;eA.textContent=apas;eV.textContent=vens;}
   var el=document.getElementById('liveDisp');
   if(el) el.textContent = libres+' lotes libres de 158 en venta';
   [...sel.options].forEach(o=>{var st=estadoDe(o.value); if(!o.dataset.base)o.dataset.base=o.textContent; o.textContent= st==='Libre'?o.dataset.base:(o.dataset.base+' · '+st.toUpperCase()); o.disabled=(st==='Vendido');});
