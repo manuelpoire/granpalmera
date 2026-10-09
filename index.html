@@ -167,8 +167,8 @@ nav.solid{background:rgba(30,75,60,.97);box-shadow:0 2px 18px rgba(0,0,0,.18)}
 .ldot:hover span{display:block}
 .ldot.sel{background:#E53935!important;z-index:6;animation:dotpulse 1.6s infinite}
 .d-Normal{background:var(--verde-2)}
-.d-Campo{background:var(--dorado)}
-.d-Parque{background:#C96A4A}
+.d-Campo{background:var(--verde-2)}
+.d-Parque{background:var(--verde-2)}
 .map-ctrl{position:absolute;top:14px;right:14px;display:flex;flex-direction:column;gap:8px;z-index:10;pointer-events:none}
 .map-ctrl button{width:42px;height:42px;border-radius:10px;border:none;background:rgba(250,247,240,.95);color:var(--verde);font-size:1.3rem;font-weight:700;cursor:pointer;box-shadow:0 3px 10px rgba(0,0,0,.3);pointer-events:auto}
 .map-leyenda{position:absolute;left:14px;bottom:14px;background:rgba(15,35,28,.88);backdrop-filter:blur(4px);border-radius:12px;padding:10px 16px;color:#fff;font-size:.72rem;display:flex;gap:14px;flex-wrap:wrap;z-index:10;max-width:calc(100% - 28px);pointer-events:none}
@@ -611,9 +611,7 @@ footer b{color:#fff;letter-spacing:.2em}
         <button onclick="mapReset()" aria-label="Restablecer" style="font-size:.9rem">⟲</button>
       </div>
       <div class="map-leyenda">
-        <span><i class="d-Normal" style="background:var(--verde-2)"></i>Normal</span>
-        <span><i style="background:var(--dorado)"></i>Frente a Campo</span>
-        <span><i style="background:#C96A4A"></i>Frente a Parque</span>
+        <span><i style="background:var(--verde-2)"></i>Disponible</span>
         <span><i style="background:#F08C1B;position:relative"><b style="position:absolute;inset:3px;border-radius:50%;background:#fff"></b></i>Apartado</span> <span><i style="background:#C23B3B;position:relative;color:#fff;font-style:normal;font-weight:900;font-size:8px;display:inline-flex;align-items:center;justify-content:center">✕</i>Vendido</span> <span style="opacity:.75">Los lotes sin marcador no están a la venta</span>
       </div>
       <div id="lotCard">
